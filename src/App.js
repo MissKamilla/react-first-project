@@ -1,22 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import HomeWorkMain1 from "./HomeWork1/HomeWorkMain";
+import HomeWorkMain2 from "./HomeWork2/HomeWorkMain";
+// import { createElement } from "react";
+// import ListComponent from "./ListComponent";
+// import CounterComponent from "./CounterComponent";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <HomeWorkMain1 /> */}
+        <HomeWorkMain2 />
+
+        {/* <ListComponent /> */}
+        {/* <CounterComponent /> */}
       </header>
     </div>
   );

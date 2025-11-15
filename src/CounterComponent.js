@@ -1,0 +1,23 @@
+import { useState } from "react";
+
+const CounterComponent = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((prevState) => prevState +1);//prevState - что бы можно бвло вызвать несколько раз setCount()
+  };
+
+  const decrement = () => {
+    setCount((prevState) => prevState +1);
+  };
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={increment}>Increment me</button>
+      <button onClick={decrement}>Decrement me</button>
+    </div>
+  );
+};
+
+export default CounterComponent;
