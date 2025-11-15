@@ -3,13 +3,9 @@ import { useState } from "react";
 import ListItem from "./ListItem";
 
 const HomeWorkMain = () => {
-  const [count, setCounter] = useState(0);
   const [input, setChange] = useState("");
   const [item, setClick] = useState([]);
 
-  const counter = () => {
-    setCounter(count + 1);
-  };
   const onChangeHandler = (event) => {
     const value = event.target.value;
     setChange(value);
@@ -21,20 +17,21 @@ const HomeWorkMain = () => {
     setChange("");
   };
 
+  const onEnterHandler = (e) => {
+    if (e.key === "Enter") {
+      onClickHandler(input);
+    }
+  };
+
   return (
     <div>
       <input
         onChange={onChangeHandler}
         value={input}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            onClickHandler(input);
-            counter();
-          }
-        }}
+        onKeyDown={onEnterHandler}
         placeholder="new task"
       />
-      <h1>{count}</h1>
+      <h1>{item.length}</h1>
       <ul>
         {item.map((element) => (
           <ListItem element={element} />
@@ -44,7 +41,6 @@ const HomeWorkMain = () => {
       <button
         onClick={() => {
           onClickHandler(input);
-          counter();
         }}
       >
         Add TO DO
