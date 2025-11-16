@@ -1,7 +1,10 @@
 const ListItem = (props) => {
-    return (
-       <li>{props.element}</li>
-    );
+  return (
+    <>
+      <li key={props.id}>{props.name}</li>
+      {props.children}
+    </>
+  );
 };
 
 export default ListItem;

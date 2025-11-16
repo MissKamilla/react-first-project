@@ -1,20 +1,35 @@
 // import ListItem from './ListItem';
 import { useState } from "react";
 import ListItem from "./ListItem";
+import ButtonComponent from "./ButtonComponent";
 
 const HomeWorkMain = () => {
-  const [input, setChange] = useState("");
-  const [item, setClick] = useState([]);
+  const initialValues = [
+    { id: 1, name: "Vova" },
+    { id: 2, name: "Kamilla" },
+    { id: 3, name: "Mia" },
+    { id: 4, name: "Keks" },
+  ];
+
+  const [input, setInput] = useState("");
+  const [click, setClick] = useState(initialValues);
 
   const onChangeHandler = (event) => {
     const value = event.target.value;
-    setChange(value);
+    setInput(value);
   };
 
   const onClickHandler = (input) => {
-    const updateElement = [...item, input];
+    const newItem = { id: Date.now(), name: input };
+    const updateElement = [...click, newItem];
+
     setClick(updateElement);
-    setChange("");
+    setInput("");
+  };
+
+  const hendleDelete = (id) => {
+    const filteredItems = click.filter(i => i.id !== id);
+    setClick(filteredItems);
   };
 
   const onEnterHandler = (e) => {
@@ -31,10 +46,12 @@ const HomeWorkMain = () => {
         onKeyDown={onEnterHandler}
         placeholder="new task"
       />
-      <h1>{item.length}</h1>
+      <h1>{click.length}</h1>
       <ul>
-        {item.map((element) => (
-          <ListItem element={element} />
+        {click.map((element) => (
+          <ListItem key={element.id} id={element.id} name={element.name}>
+            {<ButtonComponent text='Delete' onClick={() => hendleDelete(element.id)} type='button'/>}
+          </ListItem>
         ))}
       </ul>
 
@@ -50,11 +67,3 @@ const HomeWorkMain = () => {
 };
 
 export default HomeWorkMain;
-
-/* Зробити ToDo List
-
-1 Додати input і кнопку, за допомогою яких ми будемо записувати наші to-do.
-2 Після введення to-do в input і натискання на кнопку — воно має додатися до ToDo List.
-3 Маємо побачити відмальований (відображений) ToDo List в інтерфейсі.
-4 Показати кількість to-do у списку.
-5 Додати подію (event), щоб можна було додавати to-do також після натискання клавіші “Enter”. */
