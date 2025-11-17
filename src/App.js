@@ -1,23 +1,33 @@
 // import HomeWorkMain1 from "./HomeWork1/HomeWorkMain";
-import HomeWorkMain2 from "./HomeWork2/HomeWorkMain";
+// import HomeWorkMain2 from "./HomeWork2/HomeWorkMain";
+// import HomeWorkMain4 from "./HomeWork4/HomeWorkMain";
 // import { createElement } from "react";
-// import ListComponent from "./ListComponent";
+import ListComponent from "./ListComponent";
 // import CounterComponent from "./CounterComponent";
-import RenderComponent from './RenderComponent'
+// import RenderComponent from './RenderComponent'
+import MyClassComponent from "./MyClassComponent";
+import { useState } from "react";
 
 import "./App.css";
 
 function App() {
+  const [isShowTimer, setIsShowTimer] = useState(false);
+
   return (
     <div className="App">
       <header className="App-header">
         {/* <HomeWorkMain1 /> */}
-         <HomeWorkMain2 />
+        {/* <HomeWorkMain2 /> */}
+        {/* <HomeWorkMain4 /> */}
 
-        {/* <ListComponent /> */}
         {/* <CounterComponent /> */}
-
+        {/* <MyClassComponent /> */}
         {/* <RenderComponent /> */}
+
+        {isShowTimer ? <MyClassComponent /> : <ListComponent />}
+        <button onClick={() => setIsShowTimer((prev) => !prev)}>
+          Show timer
+        </button>
       </header>
     </div>
   );
