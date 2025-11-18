@@ -7,7 +7,9 @@ import HomeWorkMain5 from "./HomeWork5/HomeWorkMain";
 import CounterComponent from "./CounterComponent";
 // import RenderComponent from './RenderComponent'
 // import MyClassComponent from "./MyClassComponent";
-import Lesson5HooksComponent from "./Lesson5HooksComponent";
+// import Lesson5HooksComponent from "./Lesson5HooksComponent";
+import Lesson6HooksComponent from "./Lesson6HooksComponent";
+import ReactMemoComponent from "./ReactMemoComponent/MainComponent";
 import { useRef, useState } from "react";
 
 import "./App.css";
@@ -30,7 +32,7 @@ function App() {
         {/* <HomeWorkMain1 /> */}
         {/* <HomeWorkMain2 /> */}
         {/* <HomeWorkMain4 /> */}
-        <HomeWorkMain5 />
+        {/* <HomeWorkMain5 /> */}
 
         {/* <CounterComponent /> */}
         {/* <MyClassComponent /> */}
@@ -39,6 +41,8 @@ function App() {
         {/* <MyClassComponent />  */}
 
         {/* <Lesson5HooksComponent /> */}
+        {/* <Lesson6HooksComponent /> */}
+        <ReactMemoComponent />
       </header>
     </div>
   );
