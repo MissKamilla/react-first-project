@@ -8,7 +8,8 @@ import CounterComponent from "./CounterComponent";
 // import RenderComponent from './RenderComponent'
 // import MyClassComponent from "./MyClassComponent";
 // import Lesson5HooksComponent from "./Lesson5HooksComponent";
-import Lesson6HooksComponent from "./Lesson6HooksComponent";
+// import Lesson6HooksComponent from "./Lesson6HooksComponent";
+import Lesson7StyleComponent from "./Lesson7StyleComponent/HomeWorkMain";
 import ReactMemoComponent from "./ReactMemoComponent/MainComponent";
 import { useRef, useState } from "react";
 
@@ -42,7 +43,9 @@ function App() {
 
         {/* <Lesson5HooksComponent /> */}
         {/* <Lesson6HooksComponent /> */}
-        <ReactMemoComponent />
+
+        {/* <ReactMemoComponent /> */}
+        <Lesson7StyleComponent />
       </header>
     </div>
   );

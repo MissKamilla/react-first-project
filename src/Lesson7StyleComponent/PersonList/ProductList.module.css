@@ -1,0 +1,20 @@
+.container {
+  padding: 50px;
+  background-color: aqua;
+}
+
+.container.containerBlue {
+  background-color: blue;
+}
+
+.pinkColor {
+  color: rgb(218, 90, 111);
+}
+
+.yellowColor {
+  color: yellow;
+}
+
+.textItalic {
+  font-style: italic;
+}
