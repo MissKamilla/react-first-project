@@ -10,7 +10,9 @@ import CounterComponent from "./CounterComponent";
 // import Lesson5HooksComponent from "./Lesson5HooksComponent";
 // import Lesson6HooksComponent from "./Lesson6HooksComponent";
 // import Lesson7StyleComponent from "./Lesson7StyleComponent/HomeWorkMain";
-import Lesson8FormsComponent from "./Lesson8FormsComponent/MainComponent";
+// import Lesson8FormsComponent from "./Lesson8FormsComponent/MainComponent";
+// import Lesson9RestAPIComponent1 from "./Lesson9RestAPIComponent/MainComponent";
+import Lesson9RestAPIComponent2 from "./Lesson9RestAPIComponent/ReactQueryComponent";
 // import ReactMemoComponent from "./ReactMemoComponent/MainComponent";
 import { useRef, useState } from "react";
 
@@ -47,7 +49,9 @@ function App() {
 
         {/* <ReactMemoComponent /> */}
         {/* <Lesson7StyleComponent /> */}
-        <Lesson8FormsComponent />
+        {/* <Lesson8FormsComponent /> */}
+        {/* <Lesson9RestAPIComponent1 /> */}
+        <Lesson9RestAPIComponent2 />
       </header>
     </div>
   );
