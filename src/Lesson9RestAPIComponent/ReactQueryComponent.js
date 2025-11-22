@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useMutation, useQuery } from "react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { addContacts, getContactsList } from "./api/api";
 
 axios.defaults.baseURL = "http://localhost:3030/";
