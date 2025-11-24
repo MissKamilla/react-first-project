@@ -1,5 +1,12 @@
+import { useNavigate } from "react-router-dom";
 const About = () => {
-  return <h1 style={{ textAlign: "center" }}>About</h1>;
+  const navigate = useNavigate();
+  return (
+    <>
+      <h1 style={{ textAlign: "center" }}>About</h1>
+      <button onClick={() => navigate(-1)}>Go back</button>
+    </>
+  );
 };
 
 export default About;
