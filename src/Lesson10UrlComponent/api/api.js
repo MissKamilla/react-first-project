@@ -8,3 +8,7 @@ export const addContacts = async (payload) => {
   const contacts = await axios.post("contacts", payload);
   return contacts.data;
 };
+export const getAllUsers = async () => {
+  const contacts = await axios.get("auth");
+  return contacts.data;
+};

@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Layout = () => {
   const getActiveLink = ({ isActive }) => (isActive ? "active-link" : "");
+  const { testProvider } = useContext(AuthContext);
 
+  console.log(testProvider);
   return (
     <>
       <div
@@ -25,6 +29,7 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
+      <p>{testProvider}</p>
       <footer>All rights ... 2025</footer>
     </>
   );
